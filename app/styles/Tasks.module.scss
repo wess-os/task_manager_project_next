@@ -1,0 +1,112 @@
+@import 'variables';
+
+.tasksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    .tasksWrapper {
+        background-color: #fff;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 2rem;
+        width: 100%;
+        max-width: 600px;
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tasksList {
+            border-radius: 8px;
+            padding: 1rem;
+
+            .task {
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 0;
+                border-bottom: 1px dotted #ccc;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .taskCheckbox {
+                    margin-right: 1rem;
+
+                    input[type='checkbox'] {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 4px;
+                        background-color: #fff;
+                        border: 1px solid #ccc;
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+
+                        &:checked {
+                            background-color: #000;
+                            border-color: #000;
+                            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+                            background-size: 12px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+
+                .taskTitle {
+                    flex-grow: 1;
+                    font-size: 1rem;
+                }
+
+                .taskDelete {
+                    margin-left: 1rem;
+                    color: #dc3545;
+                    cursor: pointer;
+                }
+
+                &.completed {
+                    .taskTitle {
+                        text-decoration: line-through;
+                        color: #adb5bd;
+                    }
+
+                    .taskCheckbox {
+                        input[type='checkbox'] {
+                            background-color: #000;
+                            border-color: #000;
+                        }
+                    }
+                }
+            }
+        }
+
+        .completedTasks {
+            margin-top: 2rem;
+
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .addTaskButton {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 2rem;
+
+        &:hover {
+            background-color: darken(#000, 10%);
+        }
+    }
+}
