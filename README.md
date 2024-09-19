@@ -1,6 +1,6 @@
 # Task Manager
 
-This is a simple task manager application built with Next.js and React.
+This is a simple task manager application built with Next.js.
 
 ## See the project running
 ```bash
