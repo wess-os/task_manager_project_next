@@ -6,11 +6,13 @@ export const DeleteTaskModal = ({ isOpen, onClose, onDeleteTask }) => {
     return (
         <div className={styles.modalOverlay}>
             <div className={styles.modalContent}>
-                <h2>Confirmar Exclusão</h2>
-                <p>Tem certeza que deseja excluir esta tarefa?</p>
+                <h2>Deletar tarefa</h2>
+
+                <p>Tem certeza que você deseja deletar essa tarefa?</p>
+
                 <div className={styles.modalActions}>
-                    <button onClick={onDeleteTask}>Excluir</button>
-                    <button onClick={onClose}>Cancelar</button>
+                    <button className={styles.cancelButton} onClick={onClose}>Cancelar</button>
+                    <button className={styles.deleteTaskButton} onClick={onDeleteTask}>Deletar</button>
                 </div>
             </div>
         </div>
