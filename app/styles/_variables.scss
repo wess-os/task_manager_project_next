@@ -1,9 +1,14 @@
 $color-logo: #101828;
+
 $color-black: #000;
 $color-black-secondary: rgba(0, 0, 0, 0.54);
-$color-border-primary: #D7DDE9;
-$color-border-secondary: #E0E4EE;
-$color-check-primary: #A0DCF6;
-$color-check-secondary: #0796D3;
+
+$color-primary: #D7DDE9;
+$color-secondary: #E0E4EE;
+$color-tertiary: #A0DCF6;
+$color-quaternary: #0796D3;
+$color-quinary: #B0BBD1;
+
 $button-color-primary: linear-gradient(to right, #0796D3, #53C0F0);
-$color-icon-primary: #B0BBD1;
+$button-color-secondary: #E7EEFB;
+$button-color-tertiary: linear-gradient(to right, #D30707, #F05353);
