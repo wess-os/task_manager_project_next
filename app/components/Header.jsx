@@ -1,6 +1,7 @@
 import styles from "../styles/Header.module.scss";
 
 export default function Header() {
+    // date formatting
     const currentDate = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDate = currentDate.toLocaleDateString('pt-BR', options);
