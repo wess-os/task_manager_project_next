@@ -17,9 +17,11 @@ export default function Header() {
                     <span>FocalPoint</span>
                 </div>
             </div>
+
             <div className={styles.center}>
                 <h1>Bem-vindo de volta, Wesley</h1>
             </div>
+
             <div className={styles.right}>
                 <span>{finalFormattedDate}</span>
             </div>
