@@ -1,6 +1,6 @@
 # Task Manager
 
-This is a simple task manager application built with Next.js and React. It allows users to create, update, and delete tasks, as well as mark tasks as completed.
+This is a simple task manager application built with Next.js and React.
 
 ## See the project running
 ```bash
@@ -9,7 +9,7 @@ https://task-manager-project-next.vercel.app/
 
 ## Features
 
-- Create, update, and delete tasks
+- Create and delete tasks
 - Mark tasks as completed
 - Responsive design
 
