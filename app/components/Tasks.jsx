@@ -32,6 +32,7 @@ export default function Tasks() {
         );
     };
 
+    // add task function
     const addTask = (title) => {
         setTasks(prevTasks => [
             ...prevTasks,
@@ -39,6 +40,7 @@ export default function Tasks() {
         ]);
     };
 
+    // confirm delete task function
     const confirmDeleteTask = (id) => {
         setTaskToDelete(id);
         setIsDeleteTaskModalOpen(true);
@@ -53,6 +55,7 @@ export default function Tasks() {
         <div className={styles.tasksContainer}>
             <div className={styles.tasksWrapper}>
                 <h2>Suas tarefas de hoje</h2>
+
                 <div className={styles.tasksList}>
                     {pendingTasks.length === 0 ? (
                         <p>Não há tarefas pendentes.</p>
@@ -66,7 +69,9 @@ export default function Tasks() {
                                         onChange={() => toggleTaskCompletion(task.id)}
                                     />
                                 </div>
+
                                 <span className={styles.taskTitle}>{task.title}</span>
+
                                 <div className={styles.taskDelete} onClick={() => confirmDeleteTask(task.id)}>
                                     <FiTrash />
                                 </div>
@@ -76,6 +81,7 @@ export default function Tasks() {
                 </div>
                 <div className={styles.completedTasks}>
                     <h2>Tarefas finalizadas</h2>
+
                     <div className={styles.tasksList}>
                         {completedTasks.length === 0 ? (
                             <p>Não há tarefas concluídas.</p>
@@ -89,7 +95,9 @@ export default function Tasks() {
                                             onChange={() => toggleTaskCompletion(task.id)}
                                         />
                                     </div>
+
                                     <span className={styles.taskTitle}>{task.title}</span>
+
                                     <div className={styles.taskDelete} onClick={() => confirmDeleteTask(task.id)}>
                                         <FiTrash />
                                     </div>
@@ -99,6 +107,7 @@ export default function Tasks() {
                     </div>
                 </div>
             </div>
+
             <button className={styles.addTaskButton} onClick={() => setIsAddTaskModalOpen(true)}>Adicionar nova tarefa</button>
 
             <AddTaskModal
